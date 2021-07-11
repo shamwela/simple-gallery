@@ -18,11 +18,13 @@ class App extends Component {
         <div id='app'>
           <img src={src} id='selected' />
           <div>
-            <img
-              onClick={this.handleClick}
-              src='https://source.unsplash.com/WLUHO9A_xik/1600x900'
-              style={{ cursor: 'pointer' }}
-            />
+            {[1, 2, 3].map((image) => (
+              <img
+                onClick={this.handleClick}
+                src={`./images/${image}.jpg`}
+                style={{ cursor: 'pointer' }}
+              />
+            ))}
           </div>
         </div>
       </div>
