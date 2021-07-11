@@ -1,0 +1,75 @@
+@import './variables'
+
+*,
+*:before,
+*:after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-size: 1rem
+  color: $secondary-color
+
+body
+  background-color: $dominant-color
+  color: $secondary-color
+  font-family: Arial, sans-serif
+  line-height: 1.5
+
+// this is purely for demonstration
+#container
+  width: 100%
+  min-height: 100vh
+  padding: 1rem
+  display: flex
+  flex-direction: column
+  row-gap: 5vh
+
+h1,
+h2,
+h3
+  max-width: 30ch // for readability
+  font-weight: 700
+
+h1
+  font-size: 2rem
+
+  @media #{$mq-1000-up}
+    font-size: 3rem
+
+h2
+  font-size: 1.5rem
+
+  @media #{$mq-1000-up}
+    font-size: 2rem
+
+p
+  max-width: 60ch // for readability
+
+a,
+button
+  outline: 0
+  width: max-content
+
+a
+  text-decoration: none
+  color: $accent-color
+
+button,
+input
+  border: 0
+  border-radius: 0.125em
+  padding: 1em
+  color: $dominant-color
+
+button
+  background-color: $accent-color
+  text-transform: uppercase
+  font-weight: 500
+  cursor: pointer
+
+.secondary-button
+  background-color: #ffffff1a
+  color: $secondary-color
+
+input:focus
+  outline: 0.15em solid $accent-color
