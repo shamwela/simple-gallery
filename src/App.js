@@ -3,7 +3,7 @@ import './App.sass'
 
 class App extends Component {
   state = {
-    src: undefined,
+    src: './images/1.jpg',
   }
 
   handleClick = ({ currentTarget }) => {
@@ -16,13 +16,15 @@ class App extends Component {
     return (
       <div id='container'>
         <div id='app'>
-          <img src={src} id='selected' />
-          <div>
-            {[1, 2, 3].map((image) => (
+          <img src={src} id='display-image' alt='Displayed car' />
+          <div id='gallery'>
+            {[1, 2, 3, 4].map((image) => (
               <img
                 onClick={this.handleClick}
                 src={`./images/${image}.jpg`}
-                style={{ cursor: 'pointer' }}
+                key={image}
+                alt='A car'
+                className='images'
               />
             ))}
           </div>
