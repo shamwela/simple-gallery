@@ -16,6 +16,8 @@ class App extends Component {
 
     return (
       <div id='container'>
+        <p id='instruction'>Select an image.</p>
+
         <div id='app'>
           <img
             src={selectedSrc}
