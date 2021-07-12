@@ -16,7 +16,7 @@ class App extends Component {
 
     return (
       <div id='container'>
-        <p id='instruction'>Select an image.</p>
+        <div id='instruction'>Select an image.</div>
 
         <div id='app'>
           <img

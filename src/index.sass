@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap')
 @import './variables'
 
 *,
@@ -12,55 +13,5 @@
 body
   background-color: $dominant-color
   color: $secondary-color
-  font-family: Arial, sans-serif
+  font-family: 'Fira Code', monospace
   line-height: 1.5
-
-h1,
-h2,
-h3
-  max-width: 30ch // for readability
-  font-weight: 700
-
-h1
-  font-size: 2rem
-
-  @media #{$mq-1025-up}
-    font-size: 3rem
-
-h2
-  font-size: 1.5rem
-
-  @media #{$mq-1025-up}
-    font-size: 2rem
-
-p
-  max-width: 60ch // for readability
-
-a,
-button
-  outline: 0
-  width: max-content
-
-a
-  text-decoration: none
-  color: $accent-color
-
-button,
-input
-  border: 0
-  border-radius: 0.125em
-  padding: 1em
-  color: $dominant-color
-
-button
-  background-color: $accent-color
-  text-transform: uppercase
-  font-weight: 500
-  cursor: pointer
-
-.secondary-button
-  background-color: #ffffff1a
-  color: $secondary-color
-
-input:focus
-  outline: 0.15em solid $accent-color
