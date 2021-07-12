@@ -3,28 +3,34 @@ import './App.sass'
 
 class App extends Component {
   state = {
-    src: './images/1.jpg',
+    images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+    selectedSrc: './images/1.jpg',
   }
 
-  handleClick = ({ currentTarget }) => {
-    this.setState({ src: currentTarget.src })
+  handleSelect = ({ currentTarget }) => {
+    this.setState({ selectedSrc: currentTarget.src })
   }
 
   render() {
-    const { src } = this.state
+    const { images, selectedSrc } = this.state
 
     return (
       <div id='container'>
         <div id='app'>
-          <img src={src} id='display-image' alt='Displayed car' />
+          <img
+            src={selectedSrc}
+            id='selected-image'
+            alt='Selected sports car'
+          />
+
           <div id='gallery'>
-            {[1, 2, 3, 4].map((image) => (
+            {images.map((image) => (
               <img
-                onClick={this.handleClick}
-                src={`./images/${image}.jpg`}
                 key={image}
-                alt='A car'
+                src={`./images/${image}`}
+                onClick={this.handleSelect}
                 className='images'
+                alt='A sports car'
               />
             ))}
           </div>
