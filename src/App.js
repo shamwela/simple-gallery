@@ -20,6 +20,8 @@ class App extends Component {
 
         <div id='app'>
           <img
+            rel='preload'
+            as='image'
             src={selectedSrc}
             id='selected-image'
             alt='Selected sports car'
