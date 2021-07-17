@@ -3,7 +3,7 @@ import './App.sass'
 
 class App extends Component {
   state = {
-    images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+    imageNames: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
     selectedSrc: './images/1.jpg',
   }
 
@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   render() {
-    const { images, selectedSrc } = this.state
+    const { imageNames, selectedSrc } = this.state
 
     return (
       <div id='container'>
@@ -28,12 +28,14 @@ class App extends Component {
           />
 
           <div id='gallery'>
-            {images.map((image) => (
+            {imageNames.map((imageName) => (
               <img
-                key={image}
-                src={`./images/${image}`}
+                key={imageName}
+                src={`./images/${imageName}`}
                 onClick={this.handleSelect}
-                className='images'
+                className={
+                  selectedSrc.includes(imageName) ? 'outline images' : 'images'
+                }
                 alt='A sports car'
               />
             ))}
