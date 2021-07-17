@@ -16,16 +16,17 @@ class App extends Component {
 
     return (
       <div id='container'>
-        <div id='instruction'>Select an image.</div>
-
         <div id='app'>
-          <img
-            rel='preload'
-            as='image'
-            src={selectedSrc}
-            id='selected-image'
-            alt='Selected sports car'
-          />
+          <div id='selected-image-container'>
+            <img
+              rel='preload'
+              as='image'
+              src={selectedSrc}
+              id='selected-image'
+              alt='Selected sports car'
+            />
+            <p id='instruction'>Select an image below.</p>
+          </div>
 
           <div id='gallery'>
             {imageNames.map((imageName) => (
